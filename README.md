@@ -11,19 +11,35 @@ required:
 
 ## Installation
 
-go get github.com/avsolo/gache
+go install github.com/avsolo/gache
 
 # Documentation
 
 ## TCP Server
 
-Build for your architecture:
-
-    go build geep.go
-
 Use flags for configuring run mode:
 
-    ./geep [-addr <IP:PORT>] [-log] [-log-dir <path/to/log/dir>]
+```bash
+gache [-addr <IP:PORT>] [-log] [-log-dir <path/to/log/dir>]
+
+Usage of gache:
+  -addr string
+        Address to use by server (default "127.0.0.1:8800")
+  -cpu-prof string
+        Path to cpu.pprof file
+  -exit-on int
+        Automatically stop app after N sec
+  -log
+        Log on/off
+  -log-level int
+        Log level [1-5] (default 1)
+  -log-path string
+        Path to logs dir
+  -prof-dir string
+        Path to profile directory
+
+```
+
 
 ## From your Go application:
 

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cmd="godebug run -instrument=avsolo/gache/server,avsolo/gache/storage -o geep.out geep.go ${@}"
+cmd="godebug run -instrument=github.com/avsolo/gache/server,github.com/avsolo/gache/storage -o geep.out geep.go ${@}"
 echo "${cmd}"
 /bin/bash -c "${cmd}"

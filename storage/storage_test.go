@@ -9,8 +9,8 @@ import (
 	"crypto/md5"
 	"github.com/stretchr/testify/assert"
 
-	"avsolo/gache/lib"
-	"avsolo/gache/storage"
+	"github.com/avsolo/gache/lib"
+	"github.com/avsolo/gache/storage"
 )
 
 var log = lib.NewLogger("")

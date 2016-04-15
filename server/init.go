@@ -2,8 +2,8 @@ package server
 
 import (
 	"fmt"
-	"avsolo/gache/lib"
-	s "avsolo/gache/storage"
+	"github.com/avsolo/gache/lib"
+	s "github.com/avsolo/gache/storage"
 )
 
 var log *lib.Logger

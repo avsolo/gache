@@ -3,7 +3,7 @@ package server
 import (
 	"fmt"
     "strings"
-	s "avsolo/gache/storage"
+	s "github.com/avsolo/gache/storage"
 )
 
 // Response is simple response object

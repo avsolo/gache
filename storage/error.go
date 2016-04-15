@@ -2,7 +2,7 @@ package storage
 
 import (
 	"errors"
-	"avsolo/gache/lib"
+	"github.com/avsolo/gache/lib"
 )
 
 var log *lib.Logger

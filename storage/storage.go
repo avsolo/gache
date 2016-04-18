@@ -218,6 +218,7 @@ func (s *Storage) DGet(rkey, skey string) (interface{}, error) {
 	defer s.lock.RUnlock()
 	d, found := s.data[rkey]
 	if !found {
+		log.Warnf("RKey %s not found for dict", rkey)
 		return nil, ErrNotFound
 	}
 	itemMap, ok := (d.Value()).(map[string]interface{})
@@ -225,8 +226,10 @@ func (s *Storage) DGet(rkey, skey string) (interface{}, error) {
 		if val, found := itemMap[skey]; found {
 			return val, nil
 		}
+		log.Warnf("SKey %s not found for dict", skey)
 		return nil, ErrNotFound
 	}
+	log.Warnf("Key %s not dict", rkey)
 	return nil, ErrNotDict
 }
 

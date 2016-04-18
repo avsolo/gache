@@ -85,3 +85,21 @@ func main() {
     log.Fatal(http.ListenAndServe(":8100", nil))
 }
 ```
+
+## Benchmark
+
+### Golang benchmark:
+
+```
+22:24 $ go test -bench=. geep_test.go
+testing: warning: no tests to run
+PASS
+BenchmarkSetGet-4           3000            846026 ns/op
+BenchmarkSetUpdate-4        1000           1514453 ns/op
+BenchmarkLSetLPush-4        1000           2574296 ns/op
+BenchmarkLSetLPop-4         1000           1350004 ns/op
+BenchmarkDSetDAdd-4         1000           1741473 ns/op
+ok      command-line-arguments  10.431s
+```
+
+### Load testing with JMeter

@@ -16,7 +16,7 @@ type Server struct {
 
 // NewServer create and return Server instance
 func NewServer(addr string) *Server {
-	return &Server{addr: addr}
+	return &Server{addr: addr, KeepAlive: false}
 }
 
 // ListenTCP starts listen TCP connections

@@ -1,4 +1,4 @@
-// This file consist client side of Geep. You can use it in you Go code
+// This file consist client side of Gache. You can use it in you Go code
 // like this:
 //      c := server.NewClient(serverAddr)
 //      resp, err := c.Sendf("SET key value 10", key, val, ttl)
@@ -54,7 +54,7 @@ func (c *Client) Send(s string) (string, error) {
     if ! c.KeepAlive || c.Conn == nil {
 		c.Conn, err = net.DialTCP("tcp", nil, c.addr)
 		if err != nil {
-			log.Debugf("Dial error: %v", err)
+			log.Warnf("Dial error: %v", err)
 			return "", err
 		}
     }

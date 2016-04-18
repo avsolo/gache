@@ -7,8 +7,8 @@ import (
 	"time"
 	"runtime"
 	"runtime/pprof"
-	server "avsolo/gache/server"
-	ll "avsolo/gache/lib"
+	server "github.com/avsolo/gache/server"
+	ll "github.com/avsolo/gache/lib"
 	// "github.com/pkg/profile"
 )
 

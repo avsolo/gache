@@ -6,8 +6,8 @@ import (
 	"testing"
     "github.com/stretchr/testify/assert"
 
-	"avsolo/gache/lib"
-    "avsolo/gache/server"
+	"github.com/avsolo/gache/lib"
+    "github.com/avsolo/gache/server"
 )
 
 var _s = fmt.Sprintf

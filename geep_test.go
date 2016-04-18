@@ -1,9 +1,9 @@
-package server
+package main
 
 import (
 	"fmt"
-	"avsolo/gache/lib"
-	s "avsolo/gache/server"
+	"github.com/avsolo/gache/lib"
+	s "github.com/avsolo/gache/server"
 )
 
 var log *lib.Logger

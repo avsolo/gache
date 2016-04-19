@@ -40,7 +40,6 @@ Usage of gache:
 
 ```
 
-
 ## From your Go application:
 
 ```go
@@ -90,9 +89,10 @@ func main() {
 
 ### Golang benchmark:
 
+There are simple Go internal benchmarks for base scenarios:
+
 ```
-22:24 $ go test -bench=. geep_test.go
-testing: warning: no tests to run
+$ go test -bench=. geep_test.go
 PASS
 BenchmarkSetGet-4           3000            846026 ns/op
 BenchmarkSetUpdate-4        1000           1514453 ns/op
@@ -103,3 +103,11 @@ ok      command-line-arguments  10.431s
 ```
 
 ### Load testing with JMeter
+
+JMeter was used for more natural perfomance testing. Scenario has 3 client with 300 connection each. Load plan:
+
+[[http://i.imgur.com/uERLOuS.png]]
+
+Tests shows linear dependence between data amount and transaction per second (more precisely, about O(n) or O(log(n))). In most high load point there are 3 threads and 900 scenarios per second (SET/GET, SET/UPDATE, SET/DELETE, SET random TTL).
+
+[[http://i.imgur.com/MQ86OBS.png]]

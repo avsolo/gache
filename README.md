@@ -108,6 +108,6 @@ JMeter was used for more natural perfomance testing. Scenario has 3 client with 
 
 ![alt Profile](http://i.imgur.com/uERLOuS.png)
 
-Tests shows linear dependence between data amount and transaction per second (more precisely, about O(n) or O(log(n))). In most high load point there are 3 threads and 900 scenarios per second (SET/GET, SET/UPDATE, SET/DELETE, SET random TTL).
+Tests shows linear dependence between data amount and transaction per second (about O(n)). In most high load point there are 3 threads with 80 complex scenarios per second (SET/GET, SET/UPDATE, SET/DELETE, SET random TTL). Over 80 tps makes server irresponsible (probably TCP listner bottleneck).
 
-![alt Load result](http://i.imgur.com/MQ86OBS.png)
+![alt Load result](http://i.imgur.com/A4MP7Yt.png)
